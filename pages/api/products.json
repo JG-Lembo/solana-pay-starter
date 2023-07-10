@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "name": "Charizard",
+      "price": "0.09",
+      "description": "Obtenha um Charizard só seu!",
+      "image_url": "https://pbs.twimg.com/media/Ef2YqSKVoAEPHlL?format=jpg&name=large",
+      "filename": "Charizard.png",
+      "hash": "QmVfBczCkr4wzb6qivHNHHVFDZR3ZhZnuotR8o4wrJtHFc"
+    },
+    {
+        "id": 2,
+        "name": "Blastoise",
+        "price": "0.09",
+        "description": "Obtenha um Blastoise só seu!",
+        "image_url": "https://i.pinimg.com/originals/4e/fb/a2/4efba28478e043be9815d1b2caa5b3bc.jpg",
+        "filename": "Blastoise.png",
+        "hash": "QmdTGXhM7tfPoLzu7YkDTKHaGKh4DxeareA4tYGJmbjA4s"
+    },
+    {
+        "id": 3,
+        "name": "Venusaur",
+        "price": "0.09",
+        "description": "Obtenha um Venusaur só seu!",
+        "image_url": "https://storage.potatomedia.co/articles/potato_6c2cfd59-c085-4eeb-bc06-c5caf273542b_b6d967939c7242e78af4df52a2919e57c54db0c7.jpeg",
+        "filename": "Venusaur.png",
+        "hash": "QmQRGnJNfNV5t3JcutQiYiHqnvRJfPBpmeHEicmN6qGzYV"
+    }
+]
