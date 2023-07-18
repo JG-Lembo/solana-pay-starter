@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { create } from "ipfs-http-client";
 import styles from "../styles/CreateProduct.module.css";
-
-const client = create("https://ipfs.infura.io:5001/api/v0");
+import PinataUpload from "./PinataUpload";
 
 const CreateProduct = () => {
 
@@ -12,20 +10,10 @@ const CreateProduct = () => {
     image_url: "",
     description: "",
   });
+  
   const [file, setFile] = useState({});
-  const [uploading, setUploading] = useState(false);
 
-  async function onChange(e) {
-    setUploading(true);
-    const files = e.target.files;
-    try {
-      const added = await client.add(files[0]);
-      setFile({ filename: files[0].name, hash: added.path });
-    } catch (error) {
-      console.log("Erro ao fazer upload do arquivo: ", error);
-    }
-    setUploading(false);
-  }
+  const [uploading, setUploading] = useState(false);
 
   const createProduct = async () => {
     try {
@@ -61,13 +49,7 @@ const CreateProduct = () => {
           </header>
 
           <div className={styles.form_container}>
-            <input
-              type="file"
-              className={styles.input}
-              accept=".zip,.rar,.7zip"
-              placeholder="Emojis"
-              onChange={onChange}
-            />
+            <PinataUpload setFile={setFile} setUploading={setUploading}/>
             {file.name != null && <p className="file-name">{file.filename}</p>}
             <div className={styles.flex_row}>
               <input
@@ -113,7 +95,7 @@ const CreateProduct = () => {
               }}
               disabled={uploading}
             >
-              Create Product
+              Criar Produto
             </button>
           </div>
         </div>

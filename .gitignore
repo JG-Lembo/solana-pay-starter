@@ -30,3 +30,5 @@ yarn-error.log*
 .next
 yarn.lock
 .vercel
+
+.pinatainfo

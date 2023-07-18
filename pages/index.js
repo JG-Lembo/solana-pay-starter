@@ -37,6 +37,17 @@ const App = () => {
     }
   }, [publicKey]);
 
+  useEffect(() => {
+    if (!creating) {
+      fetch(`/api/fetchProducts`)
+        .then(response => response.json())
+        .then(data => {
+          setProducts(data);
+          console.log("Produtos", data);
+        });
+    }
+  }, [creating])
+
   const renderItemBuyContainer = () => (
     <div className="products-container">
       {products.map((product) => (
