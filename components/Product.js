@@ -19,7 +19,7 @@ export default function Product({ product }) {
 
         <div className={styles.product_action}>
           <div className={styles.product_price}>{price} USDC</div>
-            <Buy itemID={id} />
+          <Buy itemID={id} />
         </div>
       </div>
     </div>

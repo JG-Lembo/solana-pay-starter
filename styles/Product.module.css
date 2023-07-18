@@ -14,7 +14,8 @@
 }
 
 .product_image{
-  width: 140px;
+  height: 200px;
+  max-width: 220px;
   background-color: #141414;
 }
 
@@ -50,5 +51,5 @@
 }
 
 .product_price{
-  font-size: 1.3em;
+  font-size: 1 em;
 }

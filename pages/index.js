@@ -6,10 +6,6 @@ import HeadComponent from '../components/Head';
 import { useWallet } from "@solana/wallet-adapter-react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
-// Constantes
-const TWITTER_HANDLE = "web3dev_";
-const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-
 const App = () => {
   const { publicKey } = useWallet();
   const isOwner = ( publicKey ? publicKey.toString() === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false );
@@ -61,8 +57,12 @@ const App = () => {
       <HeadComponent/>
       <div className="container">
         <header className="header-container">
-          <p className="header"> 😳 Loja de emojis 😈</p>
-          <p className="sub-text">A única loja de emojis que aceita shitcoins</p>
+          <div className="title">
+                    <img alt="Pokeball" className="pokeball" src="pokeball.svg"/>
+                    <p className="header">Loja de Imagens Pokémon</p>
+                    <img alt="Pokeball" className="pokeball" src="pokeball.svg"/>
+          </div>
+          <p className="sub-text">A única loja de imagens Pokémon em USDC</p>
 
           {isOwner && (
             <button className="create-product-button" onClick={() => setCreating(!creating)}>
@@ -76,15 +76,6 @@ const App = () => {
           {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
         </main>
 
-        <div className="footer-container">
-          <img alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" />
-          <a
-            className="footer-text"
-            href={TWITTER_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >{`contruido na @${TWITTER_HANDLE}`}</a>
-        </div>
       </div>
     </div>
   );
