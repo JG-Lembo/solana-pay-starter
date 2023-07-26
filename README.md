@@ -1,16 +1,9 @@
-# Projeto de loja por meio da Solana Pay 
+# Projeto Pokémon Image Store (Solana Pay Starter)
+Construído na Solana Devnet
 
-### **Bem vindo 👋**
+## A Plataforma
 
-Para começar com este projeto, clone este repositório e siga estes comandos:
+A plataforma do projeto tem como funcionalidade permitir que os usuários adquiram imagens de diferentes Pokémons, utilizando USDC na rede Solana. Após comprar uma imagem, o usuário pode baixá-la quando quiser, mesmo após se desconectar do site.
 
-1. Execute `npm install` na raiz do seu diretório
-2. Execute `npm run dev` para iniciar o projeto
-3. Comece a codificar!
-
-### O que é a pasta .vscode?
-Se você usa o VSCode para criar seu aplicativo, incluímos uma lista de extensões sugeridas que ajudarão você a criar este projeto! Depois de abrir este projeto no VSCode, você verá um pop-up perguntando se deseja baixar as extensões recomendadas 😊.
-
-### Perguntas?
-Se tiver algumas perguntas, acesse seu [painel do Bootcamp da WEB3DEV](https://bootcamp.web3dev.com.br/courses) e vincule sua conta do Discord para ter acesso a canais úteis e a seu instrutor!
+Além disso, o usuário que possui o endereço de carteira que criou o site pode adicionar novos produtos quando quiser, colocando novas imagens, que são automaticamente "subidas" para o IPFS através do Pinata, de forma que a plataforma possa obter seus hashes para adicioná-los na lista de produtos.
 
