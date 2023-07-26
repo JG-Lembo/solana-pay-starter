@@ -22,11 +22,11 @@ const IPFSDownload = ({ hash, filename }) => {
       {imagePath ? (
         url ? (
           <div className="download-component">
-            <a className="download-button" href={url} download={filename}>Download</a>
+            <a className="download-button" href={url} download={filename}>Download ⇩</a>
           </div>
         ) : (
           <div className="download-component">
-            <button className="download-button" disabled>Download</button>
+            <button className="download-button" disabled>Download ⇩</button>
           </div>
         )
       ) : (
